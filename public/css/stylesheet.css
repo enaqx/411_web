@@ -1,0 +1,10 @@
+body {
+	color: gray;
+	font-family: sans; 
+	font-size: 14
+}
+
+a {
+    color: #cc0000;
+    text-decoration: none;
+}
