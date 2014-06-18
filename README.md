@@ -1,15 +1,16 @@
+411 Artillery Battery in Odessa
+---
 Web-album contains photos and description of 411 Artillery Battery in Odessa
-===
 
 Install:
-	$ git clone https://github.com/enaqx/411_web
-	$ npm install
-	$ node --harmony server.js
+	+ $ git clone https://github.com/enaqx/411_web
+	+ $ npm install
+	+ $ node --harmony server.js
 
 And proceed to localhost:3000
 
 License
-=====
+---
 The MIT License (MIT)
 
 Copyright (c) 2014 Nick Raienko
