@@ -1,0 +1,12 @@
+{
+  "name": "411_web",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enaqx/411_web.git"
+  },
+  "dependencies": {
+    "koa": "*",
+    "koa-static": "*"
+  }
+}
