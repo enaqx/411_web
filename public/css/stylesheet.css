@@ -82,7 +82,12 @@ header, nav {
 
 }  
 
-#content {
+.content-item {
 	padding-top: 3em;
 
+}
+
+a.nav-active {
+	background-color: lightblue;
+	transition: background-color 250ms linear;
 }
