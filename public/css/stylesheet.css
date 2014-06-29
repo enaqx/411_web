@@ -1,4 +1,6 @@
 /*CLEAR IN FUTURE*/
+/*create highliting properties*/
+
 
 body {
 	color: gray;
@@ -12,6 +14,7 @@ a {
     color: #cc0000;
     text-decoration: none;
 }
+p {margin:0;}
 
 #page {
 	margin-left: auto;
@@ -52,9 +55,28 @@ nav ul li a {
 	transition: background-color 250ms linear;
 }
 
-nav ul li a:hover {
-	background-color: lightblue;
+nav ul li a:after {
+	background-color: none;
 	transition: background-color 250ms linear;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1.75em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+nav ul li a:hover:after {
+	background-color: lightgreen;
+	transition: background-color 250ms linear;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 1.75em;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 header, nav {
@@ -79,15 +101,19 @@ header, nav {
     top: 0;  
     z-index: 100;  
     border-top: 0;  
-
 }  
 
 .content-item {
-	padding-top: 3em;
+	/*padding-top: 3em;*/
 
 }
 
 a.nav-active {
 	background-color: lightblue;
 	transition: background-color 250ms linear;
+}
+
+.content-item-active {
+	background-color: lightblue;
+
 }

@@ -1,3 +1,7 @@
+/*create highliting of each content part that rendered on display*/
+
+
+
 /*!
  * jquery.scrollto.js 0.0.1 - https://github.com/yckart/jquery.scrollto.js
  * Scroll smooth to any element in your DOM.
@@ -26,7 +30,7 @@ $.scrollTo = $.fn.scrollTo = function(x, y, options){
         var elem = $(this);
         elem.stop().animate({
             scrollLeft: !isNaN(Number(x)) ? x : $(y).offset().left + options.gap.x,
-            scrollTop: !isNaN(Number(y)) ? y : $(y).offset().top + options.gap.y
+            scrollTop: !isNaN(Number(y)) ? y : $(y).offset().top - $(".header").height() + options.gap.y
         }, options.animation);
     });
 };
@@ -84,10 +88,13 @@ var set_smooth_scrolling = function() {
 	        var theID = aArray[i];
 	        var divPos = $(theID).offset().top; // get the offset of the div from the top of page
 	        var divHeight = $(theID).height(); // get the height of the div in question
-	        if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
+	        if (windowPos + windowHeight/4 >= divPos   &&   
+                    windowPos + windowHeight/4 < (divPos + divHeight)) {
 	            $("a[href='" + theID + "']").addClass("nav-active");
+                $(theID).addClass("content-item-active");
 	        } else {
 	            $("a[href='" + theID + "']").removeClass("nav-active");
+                $(theID).removeClass("content-item-active");
 	        }
 	    }
 	    if(windowPos + windowHeight == docHeight) {
@@ -95,6 +102,8 @@ var set_smooth_scrolling = function() {
 	            var navActiveCurrent = $(".nav-active").attr("href");
 	            $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
 	            $("nav li:last-child a").addClass("nav-active");
+                $(navActiveCurrent).removeClass("content-item-active");
+                $(".content-item:last-child").addClass("content-item-active");
 	        }
 	    }
 	});
