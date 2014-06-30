@@ -1,6 +1,5 @@
 /*create highliting of each content part that rendered on display*/
-
-
+/*there was memory leakage*/
 
 /*!
  * jquery.scrollto.js 0.0.1 - https://github.com/yckart/jquery.scrollto.js
@@ -35,23 +34,36 @@ $.scrollTo = $.fn.scrollTo = function(x, y, options){
     });
 };
 
+var stickyNavTop;
+var stickyNav = function() {  
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > stickyNavTop) {   
+        $('.header').addClass('sticky');  
+    } else {
+        $('.header').removeClass('sticky');
+    }  
+};
+
+function recalc_image_top(){
+    $("#page").css('margin-top', $("#header-image").height()/2.25 * -1);
+}
+
+
 var set_smooth_scrolling = function() {
+    
+    var headerimageloadednow = false;
+    $("#header-image").load(function() {
+        recalc_image_top();
+        headerimageloadednow = true;
+    });
 
     /** 
      * This part does the "fixed navigation after scroll" functionality
      * We use the jQuery function scroll() to recalculate our variables as the 
      * page is scrolled/
     */
-	var stickyNavTop = $('.header').offset().top;
-	var stickyNav = function() {  
-		var scrollTop = $(window).scrollTop();
-
-		if (scrollTop > stickyNavTop) {   
-		    $('.header').addClass('sticky');  
-		} else {  
-		    $('.header').removeClass('sticky');   
-		}  
-	};
+    stickyNavTop = $('.header').offset().top;
 	stickyNav();
     
     /**
@@ -77,7 +89,14 @@ var set_smooth_scrolling = function() {
     } // this for loop fills the aArray with attribute href values
 
     $(window).scroll(function() {
-	
+
+        if (headerimageloadednow) {
+            stickyNavTop = $('.header').offset().top;
+            headerimageloadednow = false;
+        }
+        if( $('.sticky')[0] === undefined ) {
+            stickyNavTop = $('.header').offset().top;
+        };
 		stickyNav();
 
 	    var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
@@ -109,5 +128,13 @@ var set_smooth_scrolling = function() {
 	});
 }
 
+var reset_on_resize = function() {
+    recalc_image_top();
+    if( $('.sticky')[0] === undefined ) {
+        stickyNavTop = $('.header').offset().top;
+    };
+    stickyNav();
+}
+
 $(document).ready(set_smooth_scrolling);  
-$(window).resize(set_smooth_scrolling);
+$(window).resize(reset_on_resize);  //remake this line

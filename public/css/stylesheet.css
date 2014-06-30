@@ -39,7 +39,7 @@ body, p, ul, li, nav, header, div {
 nav ul {
 	margin: auto;
 	max-width: 30em;
-	height: 2em;
+	height: 2.25em;
 	position: relative;
 	list-style: none;
 	vertical-align: baseline;
@@ -59,30 +59,10 @@ nav ul li a {
 	transition: background-color 250ms linear;
 }
 
-nav ul li a:before {
-	background-color: none;
-	transition: background-color 250ms linear;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0em;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -100;
-}
 
-nav ul li a:hover:before {
+nav ul li a:hover {
 	background-color: lightgreen;
 	transition: background-color 250ms linear;
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0em;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -100;
 }
 
 
@@ -92,6 +72,10 @@ nav ul li a:hover:before {
 	position: absolute;
 	width: 100%;
 	max-width: 75em;
+	margin-top: calc(-2.25em + 1px);
+	height: 2.25em;
+    z-index: 100;  
+
 }
 
 .sticky {  
@@ -100,6 +84,7 @@ nav ul li a:hover:before {
     top: 0;  
     z-index: 100;  
     border-top: 0;  
+    margin:0;
 }  
 
 .content-item-wrapper {
@@ -108,8 +93,9 @@ nav ul li a:hover:before {
 	display: block;
 	overflow: hidden;
 	width: auto;
-	margin: 0px auto;
 	position: relative;
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
 
 .content-item {
@@ -123,8 +109,8 @@ a.nav-active {
 
 .content-item-active {
 	transition: box-shadow 500ms linear;
-    box-shadow: 10px 0px 10px -6px lightblue,
-    		   -10px 0px 10px -6px lightblue;
+    box-shadow: 2px 0px 5px lightblue,
+    		   -2px 0px 5px lightblue;
 }
 
 .gallery-list ul li {
@@ -140,4 +126,238 @@ a.nav-active {
 .gallery-list ul {
 	display: block;
 	height: 100%;
+}
+
+#slideshow {
+	width:100%;
+	height: 800px;
+}
+
+.slideshow-slide {
+	display: block;
+	min-width:100%;
+	min-height: 100%;
+	position: absolute;
+	    top: -9999px;
+    bottom: -9999px;
+    left: -9999px;
+    right: -9999px;
+    margin: auto;
+}
+
+
+
+/* http://themarklee.com/2013/10/16/simple-crossfading-slideshow-css/ */
+.css-slideshow {
+	position: relative;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	height: 100%;
+	width: 100%;
+}
+.css-slideshow figure {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	position: absolute;
+}
+.css-slideshow img {
+	-webkit-box-shadow: 0 0 2px #666;
+	box-shadow: 0 0 2px #666;
+}
+.css-slideshow figcaption {
+	position: absolute;
+	top: 5px;
+	color: #fff;
+	background: rgba(0,0,0, .3);
+	font-size: .8em;
+	padding: 8px 12px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	-ms-transition: opacity .5s;
+	transition: opacity .5s;
+}
+.css-slideshow:hover figure figcaption {
+	-webkit-transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	-ms-transition: opacity .5s;
+	transition: opacity .5s;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+.css-slideshow-attr {
+	max-width: 530px;
+	text-align: right;
+	font-size: .7em;
+	font-style: italic;
+}
+.css-slideshow-attr a {
+	color: #666;
+}
+.css-slideshow figure:nth-child(1),.css-slideshow figure:nth-child(2),.css-slideshow figure:nth-child(3),.css-slideshow figure:nth-child(4) {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.css-slideshow figure:nth-child(1) {
+	-webkit-animation: xfade 24s 18s infinite;
+	-moz-animation: xfade 24s 18s infinite;
+	-ms-animation: xfade 24s 18s infinite;
+	-o-animation: xfade 24s 18s infinite;
+	animation: xfade 24s 18s infinite;
+}
+.css-slideshow figure:nth-child(2) {
+	-webkit-animation: xfade 24s 12s infinite;
+	-moz-animation: xfade 24s 12s infinite;
+	-ms-animation: xfade 24s 12s infinite;
+	-o-animation: xfade 24s 12s infinite;
+	animation: xfade 24s 12s infinite;
+}
+.css-slideshow figure:nth-child(3) {
+	-webkit-animation: xfade 24s 6s infinite;
+	-moz-animation: xfade 24s 6s infinite;
+	-ms-animation: xfade 24s 6s infinite;
+	-o-animation: xfade 24s 6s infinite;
+	animation: xfade 24s 6s infinite;
+}
+.css-slideshow figure:nth-child(4) {
+	-webkit-animation: xfade 24s 0s infinite;
+	-moz-animation: xfade 24s 0s infinite;
+	-ms-animation: xfade 24s 0s infinite;
+	-o-animation: xfade 24s 0s infinite;
+	animation: xfade 24s 0s infinite;
+}
+
+
+@keyframes "xfade" {
+ 0% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   	filter: alpha(opacity=100);
+   	opacity: 1;
+ }
+23% {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+30% {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+ 98% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   	filter: alpha(opacity=0);
+   	opacity: 0;
+ }
+ 100% {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   	filter: alpha(opacity=100);
+   	opacity: 1;
+ }
+}
+@-moz-keyframes xfade {
+ 0% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+23% {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+30% {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+98% {
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+100% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+
+
+@-webkit-keyframes "xfade" {
+ 0% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+23% {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+30% {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+98% {
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+100% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+
+
+@-ms-keyframes "xfade" {
+ 0% {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+23% {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+30% {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+ 98% {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+ 100% {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+}
+@-o-keyframes "xfade" {
+ 0% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
+23% {
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+30% {
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+ 98% {
+   filter: alpha(opacity=0);
+   opacity: 0;
+ }
+ 100% {
+   filter: alpha(opacity=100);
+   opacity: 1;
+ }
 }
