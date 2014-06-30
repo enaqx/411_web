@@ -5,16 +5,18 @@
 body {
 	color: gray;
 	font-family: sans; 
-	font-size: 14;
+	font-size: 20;
 	margin: 0;
 	padding: 0;
 }
 
-a {
-    color: #cc0000;
-    text-decoration: none;
+p {
+	margin:0;
 }
-p {margin:0;}
+
+ul {
+	margin: 0;
+}
 
 #page {
 	margin-left: auto;
@@ -103,9 +105,14 @@ header, nav {
     border-top: 0;  
 }  
 
-.content-item {
-	/*padding-top: 3em;*/
+.content-item-wrapper {
+	background-color: white; 
+	transition: box-shadow 500ms linear;
 
+}
+
+.content-item {
+	background-color: white;
 }
 
 a.nav-active {
@@ -114,6 +121,8 @@ a.nav-active {
 }
 
 .content-item-active {
-	background-color: lightblue;
+	transition: box-shadow 500ms linear;
+    box-shadow:  -15px 0px 60px 25px #ffffff, 
+        10px 0px 25px -5px lightblue;
 
 }

@@ -103,7 +103,7 @@ var set_smooth_scrolling = function() {
 	            $("a[href='" + navActiveCurrent + "']").removeClass("nav-active");
 	            $("nav li:last-child a").addClass("nav-active");
                 $(navActiveCurrent).removeClass("content-item-active");
-                $(".content-item:last-child").addClass("content-item-active");
+                $(".content-item-wrapper:last").addClass("content-item-active");
 	        }
 	    }
 	});
