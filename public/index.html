@@ -1,37 +1,140 @@
 <!DOCTYPE html>
-<html><head><title>
-411 Artillery Battery Odessa
-</title>
-<link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
+<html>
+<head>
+    <title>
+        411 Artillery Battery Odessa
+    </title>
+    <link type="text/css" rel="stylesheet" href="css/stylesheet.css" />
+    <script src="js/lib/jquery-2.1.1.min.js"></script>
+    <script src="js/context.js"></script>
 </head>
-
-
 <body>
+    <!-- insert full image and calculate half -->
+    <img id="header-image" src="img/M-296-wide.jpg" style=" margin-left: auto;
+    margin-right: auto;
+    max-width: 75em;" />
+<div id="page">
+    <div class="header">
+        <!-- there is header -->
+        <header>
+            <nav>
+                <ul>
+                    <li> <a href="#content"> Home </a> </li>
+                    <li> <a href="#story"> Story </a> </li>
+                    <li> <a href="#gallery"> Gallery </a> </li>
+                    <li> <a href="#any"> anything </a> </li>
+                </ul>
+            </nav>
+        </header>
+    </div>   
 
-<img src="img/M-296-wide_half.jpg" />
-<p>A memorial of Odessa <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB_%D0%B3%D0%B5%D1%80%D0%BE%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D1%8B">411 Artillery Battery.</a>
-Took <strong>WW2</strong> hostilities in 15-16 October 1941.</p>
-<p>Contains: 
-<ul>
-<li>Memorial</li>
-<li>Museum</li>
-<li>Military equipment</li>
-    <ul>
-    <li>М-296 (<em>"Malyutka"</em>) Small Coastal Attack Diesel Submarine</li>
-    <li>NI-1 (<em>"Na Ispug", "Odessa tank"</em>) Armoured Fighting Vehicle </li>
-    <li>T-34-85 Medium Tank</li>
-    <li>BM-13 (<em>"Katyusha"</em>) Multiple Rocket Launcher</li>
-    <li>I-16 Fighter Aircraft</li>
-    <li>S-125 (<em>"Neva"</em>) Surface-to-Air missile</li>
-    <li>B-13 130mm Naval Gun</li>
-    <li>B-34 100mm Naval Gun</li>
-    <li>... and other</li>
-    </ul>
-<li>Original coastal defense battery</li>
-<li>Armoured Train and Historic Tram</li>
-<li>Line of Defense in park</li>
-</ul>
-</p>
+    <div id="content" class="content-item-wrapper" 
+    style="margin-top: calc(2.25em + 1px);">
+        <div class="content-item">
 
+            <div id="slideshow">
+                <div class="css-slideshow">
+                    <figure>
+                        <img src="img/p1.jpg" alt="class-header-css3"  class="slideshow-slide" />
+                        <figcaption>1</figcaption> 
+                    </figure>
+                    <figure>
+                        <img src="img/p2.jpg" alt="class-header-semantics"  class="slideshow-slide" />
+                        <figcaption>2</figcaption> 
+                    </figure>
+                    <figure>
+                        <img src="img/p3.jpg" alt="class-header-offline"  class="slideshow-slide" />
+                        <figcaption>3</figcaption> 
+                    </figure>
+                    <figure>
+                        <img src="img/p4.jpg" alt="class-header-device"  class="slideshow-slide" />
+                        <figcaption>4</figcaption> 
+                    </figure>
+                  </div>  
+            </div>
+
+
+
+        <!--
+            <p> A memorial of Odessa <a href="http://ru.wikipedia.org/wiki/%D0%9C%D0%B5%D0%BC%D0%BE%D1%80%D0%B8%D0%B0%D0%BB_%D0%B3%D0%B5%D1%80%D0%BE%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B9_%D0%BE%D0%B1%D0%BE%D1%80%D0%BE%D0%BD%D1%8B_%D0%9E%D0%B4%D0%B5%D1%81%D1%81%D1%8B">411 Artillery Battery.</a>
+            Took <strong>WW2</strong> hostilities in 15-16 October 1941.</p>
+            <p>Contains: 
+            <ul>
+            <li>Memorial</li>
+            <li>Museum</li>
+            <li>Military equipment</li>
+                <ul>
+                <li>М-296 (<em>"Malyutka"</em>) Small Coastal Attack Diesel Submarine</li>
+                <li>NI-1 (<em>"Na Ispug", "Odessa tank"</em>) Armoured Fighting Vehicle </li>
+                <li>T-34-85 Medium Tank</li>
+                <li>BM-13 (<em>"Katyusha"</em>) Multiple Rocket Launcher</li>
+                <li>I-16 Fighter Aircraft</li>
+                <li>S-125 (<em>"Neva"</em>) Surface-to-Air missile</li>
+                <li>B-13 130mm Naval Gun</li>
+                <li>B-34 100mm Naval Gun</li>
+                <li>... and other</li>
+                </ul>
+            <li>Original coastal defense battery</li>
+            <li>Armoured Train and Historic Tram</li>
+            <li>Line of Defense in park</li>
+            </ul>
+            </p>
+            -->
+        </div>
+    </div>
+    <div id="story" class="content-item-wrapper">
+    <div class="content-item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac purus eu lacus luctus scelerisque. Nam pharetra pulvinar dolor, id tristique sapien hendrerit suscipit. Etiam vestibulum nulla in ultrices tincidunt. Aliquam sit amet nibh eget eros luctus dictum. Sed sed ultricies odio. Aliquam erat volutpat. Donec quis est pellentesque, hendrerit dui quis, egestas tellus. Donec porttitor mattis ligula, vitae feugiat lorem iaculis nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In blandit nulla ac pretium malesuada. Fusce eleifend rutrum purus, nec eleifend nulla fringilla et.
+
+        Aenean sit amet fringilla elit. Nullam a adipiscing lectus. Proin bibendum, lorem in rutrum aliquam, massa justo hendrerit nisi, ac varius eros arcu a metus. Fusce bibendum, quam et venenatis commodo, orci odio fringilla lectus, a aliquet est diam vitae nisi. Morbi eu turpis sed ligula tempus fermentum dignissim ac justo. Phasellus tristique, metus vitae condimentum molestie, arcu nisi molestie libero, in gravida ipsum ipsum vitae enim. Morbi blandit, elit eu volutpat interdum, ligula lacus posuere lacus, nec vulputate tortor elit sit amet lectus.
+
+        Quisque lobortis accumsan pellentesque. Quisque cursus sagittis quam, nec facilisis sem mattis sed. Mauris et ornare justo, vitae sagittis purus. Proin rutrum elit eget elit condimentum, ac imperdiet enim convallis. Pellentesque consectetur sollicitudin sagittis. Suspendisse pharetra tellus in massa rhoncus porta ac vel nibh. Proin vel justo libero. Sed commodo vitae neque vel blandit.
+
+        Nunc semper orci eget elementum dictum. Ut mattis leo erat. Vestibulum sagittis ligula nec felis convallis dictum. Curabitur mauris nisi, molestie eget magna eu, convallis pharetra eros. Etiam at bibendum nisl. Praesent malesuada dui rutrum tempor malesuada. In feugiat imperdiet nulla, eu eleifend justo luctus dictum. Fusce molestie metus vitae nisl vehicula, vitae porttitor lectus egestas. Sed in dictum nibh.
+
+        Sed magna erat, condimentum vel est at, dignissim molestie ante. Sed ligula nunc, porta ac vulputate non, congue in velit. Integer id sapien ante. Sed ac nisl nec risus mollis pharetra. Fusce sit amet sagittis ipsum, eget suscipit mi. Pellentesque velit leo, tempus ut feugiat non, auctor condimentum purus. Etiam semper faucibus enim, sed mattis nibh venenatis id. Praesent libero odio, vehicula sit amet tellus vitae, iaculis vestibulum odio.
+        
+    </div></div>
+    <div id="gallery" class="content-item-wrapper">
+    <div class="content-item">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac purus eu lacus luctus scelerisque. Nam pharetra pulvinar dolor, id tristique sapien hendrerit suscipit. Etiam vestibulum nulla in ultrices tincidunt. Aliquam sit amet nibh eget eros luctus dictum. Sed sed ultricies odio. Aliquam erat volutpat. Donec quis est pellentesque, hendrerit dui quis, egestas tellus. Donec porttitor mattis ligula, vitae feugiat lorem iaculis nec. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In blandit nulla ac pretium malesuada. Fusce eleifend rutrum purus, nec eleifend nulla fringilla et.
+
+        Aenean sit amet fringilla elit. Nullam a adipiscing lectus. Proin bibendum, lorem in rutrum aliquam, massa justo hendrerit nisi, ac varius eros arcu a metus. Fusce bibendum, quam et venenatis commodo, orci odio fringilla lectus, a aliquet est diam vitae nisi. Morbi eu turpis sed ligula tempus fermentum dignissim ac justo. Phasellus tristique, metus vitae condimentum molestie, arcu nisi molestie libero, in gravida ipsum ipsum vitae enim. Morbi blandit, elit eu volutpat interdum, ligula lacus posuere lacus, nec vulputate tortor elit sit amet lectus.
+
+        Quisque lobortis accumsan pellentesque. Quisque cursus sagittis quam, nec facilisis sem mattis sed. Mauris et ornare justo, vitae sagittis purus. Proin rutrum elit eget elit condimentum, ac imperdiet enim convallis. Pellentesque consectetur sollicitudin sagittis. Suspendisse pharetra tellus in massa rhoncus porta ac vel nibh. Proin vel justo libero. Sed commodo vitae neque vel blandit.
+
+        Nunc semper orci eget elementum dictum. Ut mattis leo erat. Vestibulum sagittis ligula nec felis convallis dictum. Curabitur mauris nisi, molestie eget magna eu, convallis pharetra eros. Etiam at bibendum nisl. Praesent malesuada dui rutrum tempor malesuada. In feugiat imperdiet nulla, eu eleifend justo luctus dictum. Fusce molestie metus vitae nisl vehicula, vitae porttitor lectus egestas. Sed in dictum nibh.
+
+        Sed magna erat, condimentum vel est at, dignissim molestie ante. Sed ligula nunc, porta ac vulputate non, congue in velit. Integer id sapien ante. Sed ac nisl nec risus mollis pharetra. Fusce sit amet sagittis ipsum, eget suscipit mi. Pellentesque velit leo, tempus ut feugiat non, auctor condimentum purus. Etiam semper faucibus enim, sed mattis nibh venenatis id. Praesent libero odio, vehicula sit amet tellus vitae, iaculis vestibulum odio.
+        
+    </div></div>
+    <div id="any" class="content-item-wrapper">
+    <div class="content-item gallery-list">
+        <ul>
+            <li>
+                <a href="img/p1.jpg">
+                    <img class="lazy" data-original="img/p1.jpg" width="500" height="540" src="img/p1.jpg" style="display:block;">
+                </a>
+            </li>
+            <li>
+                <a href="img/p2.jpg">
+                    <img class="lazy" data-original="img/p2.jpg" width="500" height="540" src="img/p2.jpg" style="display:block;">
+                </a>
+            </li>
+            <li>
+                <a href="img/p3.jpg">
+                    <img class="lazy" data-original="img/p3.jpg" width="500" height="540" src="img/p3.jpg" style="display:block;">
+                </a>
+            </li>
+            <li>
+                <a href="img/p4.jpg">
+                    <img class="lazy" data-original="img/p4.jpg" width="500" height="540" src="img/p4.jpg" style="display:block;">
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+</div>
 </body>
 </html>
