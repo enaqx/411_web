@@ -1,20 +1,6 @@
 /** @jsx React.DOM */
 
-var CommentBox = React.createClass({
-  render: function() {
-    return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
-      </div>
-    );
-  }
-});
-React.renderComponent(
-  <CommentBox />,
-  document.getElementById('nav')
-);
-
-/* var navbarInstance = (
+var navbarInstance = (
     <Navbar>
       <Nav>
         <NavItem key={1} href="#">Link</NavItem>
@@ -33,4 +19,4 @@ React.renderComponent(
 React.renderComponent(
   navbarInstance, 
   document.getElementById("nav")
-); */
+);
